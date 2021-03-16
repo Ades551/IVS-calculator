@@ -1,0 +1,14 @@
+Meeting: - kazdy tyzden stvrtok 17.00 (vzhladom na stav projektu sa moze menit)
+
+
+'''
+GUI, mat. kniznice, profiling, instalator, testy, dokumentacia
+
+xlog:  
+xlog:
+xlog:
+'''
+
+Komunikacne kanaly: Discord
+System pre spravu verzii: GitHub
+
