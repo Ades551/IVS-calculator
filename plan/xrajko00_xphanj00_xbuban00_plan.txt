@@ -1,14 +1,59 @@
-Meeting: - kazdy tyzden stvrtok 17.00 (vzhladom na stav projektu sa moze menit)
+Termíny:
+	- 19.3.2021
+		- vytvorenie testov pre matematickú knižnicu
+	- 26.3.2021
+		- vytvorenie matematickej knižnice
+		- vytvorenie grafického rozhrania
+	- 2.4.2021
+		- prepojenie matematickej knižnice s grafickým rozhraním
+		- profiling
+	- 9.4.2021
+		- dokumentácia (Doxygen)
+		- inštalátor, makefile
+	- 16.4.2021
+		- uživateľská dokumentácia
+		- príadné dolaďovanie programu
+	- 23.4.2021
+		- finalizácia produktu (konečné testovanie)
+		- zhodnotenie práce
+	- 28.4.2021
+		- deadline pre odovzdanie
+	- 7.5.2021
+		- celkové zhodnotenie problémov
+		- skúšobná inštalácia
+	- 14.5.2021
+		- vytvorenie prezentácie
 
+Úlohy:
+	- vytvorenie testov pre matematickú knižnicu
+	- vytvorenie matematickej knižnice
+	- vytvorenie grafického rozhrania
+	- prepojenie matematickej knižnice s grafickým rozhraním
+	- profiling
+	- inštalátor
+	- vytvorenie makefile
+	- vytvorenie prezentácie
+	
+	- xrajko00 Adam Rajko
+		- Plán projektu
+		- Inicializácia projektu
+		- uživateľská dokumentácia
+	
+	- xbuban00 Richard Bubán
+	
+	- xphanj00 Phan Jakub
+	
+	- spoločné úlohy
+		- kontrola programovej dokumentácie
+		- kontrola uživateľskej dokumentácie
+		- finalizácia produktu (konečné testovanie)
+		- zhodnotenie práce
+		
 
-'''
-GUI, mat. kniznice, profiling, instalator, testy, dokumentacia
+Komunikačné kanály:
+	- Discord
+	- telefon (v krajných prípadoch)
 
-xlog:  
-xlog:
-xlog:
-'''
-
-Komunikacne kanaly: Discord
-System pre spravu verzii: GitHub
-
+System pre spravu verzii:
+	- GitHub
+		- https://github.com/Ades551/IVS-calculator
