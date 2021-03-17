@@ -5,7 +5,7 @@ Termíny:
 		- vytvorenie matematickej knižnice
 		- vytvorenie grafického rozhrania
 	- 2.4.2021
-		- prepojenie matematickej knižnice s grafickým rozhraním
+		- implementácia a prepojenie matematickej knižnice s grafickým rozhraním
 		- profiling
 	- 9.4.2021
 		- dokumentácia (Doxygen)
@@ -25,27 +25,32 @@ Termíny:
 		- vytvorenie prezentácie
 
 Úlohy:
-	
 	- xrajko00 Adam Rajko
 		- plán projektu
 		- inicializácia projektu
 		- vytvorenie uživateľská dokumentácia
 		- vytvorenie testov pre matematickú knižnicu
-		- výpočet smerodatnej odchýlky
 		- inštalátor
+		- kontrola dodržiavania termínov
+		- README.md
 	
 	- xbuban00 Richard Bubán
 		- vytvorenie matematickej knižnice
 		- profiling
 		- vytvorenie makefile
+		- vytvorenie testov pre matematickú knižnicu
 	
 	- xphanj00 Phan Jakub
 		- vytvorenie grafického rozhrania
-		- prepojenie matematickej knižnice s grafickým rozhraním
+		- výpočet smerodatnej odchýlky
 		- vytvorenie programovej dokumentácie
+		- implementáciu matematickej knižnice
 	
 	- spoločné úlohy
+		- mockup
+		- prepojenie matematickej knižnice s grafickým rozhraním
 		- kontrola programovej dokumentácie
+		- testovanie jednotlivých súčastí
 		- kontrola uživateľskej dokumentácie
 		- finalizácia produktu (konečné testovanie)
 		- zhodnotenie práce
@@ -53,7 +58,7 @@ Termíny:
 		
 
 Komunikačné kanály:
-	- Discord
+	- Discord (meeting každý týždeň)
 	- telefon (v krajných prípadoch)
 
 Systém pre správu verzií:
