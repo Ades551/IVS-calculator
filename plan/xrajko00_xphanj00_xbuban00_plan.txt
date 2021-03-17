@@ -25,35 +25,37 @@ Termíny:
 		- vytvorenie prezentácie
 
 Úlohy:
-	- vytvorenie testov pre matematickú knižnicu
-	- vytvorenie matematickej knižnice
-	- vytvorenie grafického rozhrania
-	- prepojenie matematickej knižnice s grafickým rozhraním
-	- profiling
-	- inštalátor
-	- vytvorenie makefile
-	- vytvorenie prezentácie
 	
 	- xrajko00 Adam Rajko
-		- Plán projektu
-		- Inicializácia projektu
-		- uživateľská dokumentácia
+		- plán projektu
+		- inicializácia projektu
+		- vytvorenie uživateľská dokumentácia
+		- vytvorenie testov pre matematickú knižnicu
+		- výpočet smerodatnej odchýlky
+		- inštalátor
 	
 	- xbuban00 Richard Bubán
+		- vytvorenie matematickej knižnice
+		- profiling
+		- vytvorenie makefile
 	
 	- xphanj00 Phan Jakub
+		- vytvorenie grafického rozhrania
+		- prepojenie matematickej knižnice s grafickým rozhraním
+		- vytvorenie programovej dokumentácie
 	
 	- spoločné úlohy
 		- kontrola programovej dokumentácie
 		- kontrola uživateľskej dokumentácie
 		- finalizácia produktu (konečné testovanie)
 		- zhodnotenie práce
+		- vytvorenie prezentácie
 		
 
 Komunikačné kanály:
 	- Discord
 	- telefon (v krajných prípadoch)
 
-System pre spravu verzii:
+Systém pre správu verzií:
 	- GitHub
 		- https://github.com/Ades551/IVS-calculator
