@@ -1,6 +1,7 @@
 #include<iostream>
+#include "lib/math.h"
 
 int main() {
-	cout << "Sample calculator source code" << endl;
+	std::cout << CalcMath::add(5, 20) << std::endl;
 	return 0;
 }
