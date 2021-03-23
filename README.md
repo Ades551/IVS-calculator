@@ -2,18 +2,21 @@ Prostredi
 ---------
 
 Ubuntu 64bit
-Windows 64bit
 
 Autori
 ------
 
-Nazev tymu
-- xlogin01 jmeno prijmeni 
-- xlogin02 jmeno prijmeni 
-- xlogin03 jmeno prijmeni 
-- xlogin04 jmeno prijmeni 
+Avengers
+- xrajko00 Adam Rajko 
+- xphanj00 Jakub Phan 
+- xbuban00 Richard Bubán
 
 Licence
 -------
 
 Tento program je poskytovan...
+
+Build
+-------
+
+cd build/; cmake ..
