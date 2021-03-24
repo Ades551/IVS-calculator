@@ -2,3 +2,4 @@ build/
 libs/
 *.sh
 .vscode/
+.dist/
