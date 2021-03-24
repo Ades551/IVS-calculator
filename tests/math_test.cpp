@@ -161,8 +161,45 @@ TEST_F(Math, SquareRoot) {
     ASSERT_NEAR(math.root(2, 8), 2.828427125, abs);
 
     // not equal
+    ASSERT_NE(math.root(2, 16), 8);
+    EXPECT_NE(math.root(2, 9), 4.5);
+    EXPECT_NE(math.root(3, -8), 2);
+    EXPECT_NE(math.root(-3, 8), -2);
 
     // false
     ASSERT_FALSE(math.root(2, -1));
     ASSERT_FALSE(math.root(4, -1));
+}
+
+TEST_F(Math, Logarithm) {
+    // equal
+    ASSERT_EQ(math.log(2, 4), 2);
+    EXPECT_EQ(math.log(10, 100), 2);
+    EXPECT_EQ(math.log(3, 27), 3);
+
+    // floating point
+    ASSERT_NEAR(math.log(2, 15), 3.906890596, abs);
+
+    // not equal
+    ASSERT_NE(math.log(2, 5), 25);
+    EXPECT_NE(math.log(2, 8), 4);
+
+    // false
+    ASSERT_FALSE(math.log(2, 0));
+    ASSERT_FALSE(math.log(10, -5));
+}
+
+TEST_F(Math, Factorial) {
+    // equal
+    ASSERT_EQ(math.fact(0), 1);
+    EXPECT_EQ(math.fact(5), 125);
+
+    // not equal
+    ASSERT_NE(math.fact(1), 0);
+    EXPECT_NE(math.fact(2), 4);
+    EXPECT_NE(math.fact(4), 16);
+
+    // false
+    ASSERT_FALSE(math.fact(-1));
+    ASSERT_FALSE(math.fact(-100));
 }
