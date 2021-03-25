@@ -19,6 +19,6 @@ Tento program je poskytovan...
 Build
 -------
 
-cd src/; make
-make test - spustí testy
-make clean - vymaže build
+- cd src/; make
+- make test - spustí testy
+- make clean - vymaže build
