@@ -1,5 +1,4 @@
-build/
-libs/
 *.sh
 .vscode/
 .dist/
+src/build/
