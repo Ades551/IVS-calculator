@@ -19,4 +19,6 @@ Tento program je poskytovan...
 Build
 -------
 
-cd build/; cmake ..
+cd src/; make
+make test - spustí testy
+make clean - vymaže build
