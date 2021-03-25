@@ -1,4 +1,5 @@
-*.sh
+commit.sh
+update.sh
 .vscode/
 .dist/
 src/build/
