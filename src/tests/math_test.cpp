@@ -5,7 +5,7 @@
 class Math : public ::testing::Test {
 protected:
     CalcMath math;
-    const double abs = 1e-8;
+    const double abs = 1e-6;
 };
 
 // CalcMath.add tests
@@ -54,7 +54,7 @@ TEST_F(Math, Subtraction) { // 1 problem
     EXPECT_EQ(math.sub(-0.5, 0.5), -1);
     EXPECT_EQ(math.sub(-0.5, -0.5), 0);
     EXPECT_EQ(math.sub(1.25, 0.25), 1);
-    //EXPECT_NEAR(math.sub(-25, 25.2657), -0.2657, abs); suspicious
+    EXPECT_NEAR(math.sub(25, 25.2657), -0.2657, abs);
     EXPECT_EQ(math.sub(3.14159, 3.14159), 0);
     
     // not equal
@@ -108,8 +108,8 @@ TEST_F(Math, Division) {
     ASSERT_EQ(math.div(1, 2), 0.5);
     EXPECT_EQ(math.div(5, 2), 2.5);
     EXPECT_EQ(math.div(-5, 2), -2.5);
-    EXPECT_NEAR(math.div(-5, 3), -1.66666666, abs); // Mozno bude problem
-    EXPECT_NEAR(math.div(5, 3), 1.66666666, abs);
+    EXPECT_NEAR(math.div(-5, 3), -1.666666, abs);
+    EXPECT_NEAR(math.div(5, 3), 1.666666, abs);
     EXPECT_EQ(math.div(3.14159, 3.14159), 1);
 
     // not equal
@@ -123,7 +123,7 @@ TEST_F(Math, Division) {
 }
 
 // CalcMath.pow tests
-TEST_F(Math, Exponentiation) { // 1 problem
+TEST_F(Math, Exponentiation) {
     // equal
     ASSERT_EQ(math.pow(2, 2), 4);
     EXPECT_EQ(math.pow(0, 1), 0);
@@ -139,7 +139,7 @@ TEST_F(Math, Exponentiation) { // 1 problem
     ASSERT_EQ(math.pow(0.5, 2), 0.25);
     EXPECT_EQ(math.pow(2, -2), 0.25);
     EXPECT_EQ(math.pow(-2, -2), 0.25);
-    //EXPECT_NEAR(math.pow(6, -2), 0.027777, abs); // mozno bude problem --- aj je :D
+    EXPECT_NEAR(math.pow(6, -2), 0.027777, abs);
     EXPECT_NEAR(math.pow(3.14159, 3.14159), 36.46195209, abs);
 
     // not equal
@@ -157,7 +157,7 @@ TEST_F(Math, SquareRoot) { // 2 problemy
     EXPECT_EQ(math.root(2, 0), 0);
     EXPECT_EQ(math.root(2, 9), 3);
     EXPECT_EQ(math.root(3, 27), 3);
-    //EXPECT_EQ(math.root(3, -8), -2); -8 je mensie ako 0
+    EXPECT_EQ(math.root(3, -8), -2);
     EXPECT_EQ(math.root(2, 1000000), 1000);
     
     // floating point
@@ -167,7 +167,7 @@ TEST_F(Math, SquareRoot) { // 2 problemy
     // not equal
     ASSERT_NE(math.root(2, 16), 8);
     EXPECT_NE(math.root(2, 9), 4.5);
-    //EXPECT_NE(math.root(3, -8), 2); -8 je mensie ako 0
+    EXPECT_NE(math.root(3, -8), 2);
     EXPECT_NE(math.root(-3, 8), -2);
 
     // false
