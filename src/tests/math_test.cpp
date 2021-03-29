@@ -36,7 +36,7 @@ TEST_F(Math, Addition) {
 }
 
 // CalcMath.sub tests
-TEST_F(Math, Subtraction) { // 1 problem
+TEST_F(Math, Subtraction) {
     // equal
     ASSERT_EQ(math.sub(5, 25), -20);
     EXPECT_EQ(math.sub(0, 0), 0);
@@ -151,7 +151,7 @@ TEST_F(Math, Exponentiation) {
 }
 
 // CalcMath.root tests
-TEST_F(Math, SquareRoot) { // 2 problemy
+TEST_F(Math, SquareRoot) {
     // equal
     ASSERT_EQ(math.root(2, 4), 2);
     EXPECT_EQ(math.root(2, 0), 0);

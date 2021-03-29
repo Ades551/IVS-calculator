@@ -53,5 +53,5 @@ public:
      * @brief Math factorial
      * @param number factorial number 
      */
-    static unsigned long fact(long number);
+    static unsigned long fact(double number);
 };
