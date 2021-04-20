@@ -11,7 +11,7 @@ mkdir -p "installer/${PROJECT_PACK_NAME}/usr/local/bin" && cp ./build/calc "./in
 
 read -p "Create auto generated control file? [Y/n]: " input
 
-printf "Package: ${PROJECT_NAME}\nVersion: ${PROJECT_VER}\nArchitecture: ${PROJECT_ARCH}\nMaintainer: Not set\nDescription: Not set\n" > "./installer/${PROJECT_PACK_NAME}/DEBIAN/control"
+printf "Package: ${PROJECT_NAME}\nVersion: ${PROJECT_VER}\nArchitecture: ${PROJECT_ARCH}\nMaintainer: Not set\nDescription: Not set\nDepends: qt5-default\n" > "./installer/${PROJECT_PACK_NAME}/DEBIAN/control"
 
 if [ "$input" == "n" ] || [ "$input" == "N" ]; then
     nano "./installer/${PROJECT_PACK_NAME}/DEBIAN/control"
