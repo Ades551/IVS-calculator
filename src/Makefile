@@ -6,3 +6,9 @@ clean:
 
 test:
 	./build/math_test
+
+getlibs:
+	sudo apt-get install qt5-default
+
+run:
+	./build/calc
