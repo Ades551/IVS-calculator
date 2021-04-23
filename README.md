@@ -27,4 +27,4 @@ $ sudo apt install ./ivs-calc_1.0-1_Linux.deb
 
 ## Licencia
 
-Tento program je poskytovaný pod licenciou [GNU General Public License v3](https://github.com/Ades551/IVS-calculator/LICENSE)
+Tento program je poskytovaný pod licenciou [GNU General Public License v3](https://github.com/Ades551/IVS-calculator/blob/master/LICENSE)
