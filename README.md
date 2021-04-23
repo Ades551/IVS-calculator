@@ -1,24 +1,30 @@
-Prostredi
----------
+# ivs-Calculator
 
-Ubuntu 64bit
+Kalkulačka pre Debian based distribúcie. (Testované na Ubuntu 20.04)
 
-Autori
-------
+## Prostredie
+
+Ubuntu 20.04 64bit
+
+## Autori
 
 Avengers
 - xrajko00 Adam Rajko 
 - xphanj00 Jakub Phan 
 - xbuban00 Richard Bubán
 
-Licence
--------
+## Build
 
-Tento program je poskytovan...
+```console
+$ cd src/
+$ make
+```
+## Inštalácia
+```console
+$ cd src/install
+$ sudo apt install ./ivs-calc_1.0-1_Linux.deb
+```
 
-Build
--------
+## Licencia
 
-- cd src/; make
-- make test - spustí testy
-- make clean - vymaže build
+Tento program je poskytovaný pod licenciou [GNU General Public License v3](https://github.com/Ades551/IVS-calculator/LICENSE.txt)
