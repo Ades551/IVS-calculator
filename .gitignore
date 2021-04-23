@@ -4,3 +4,4 @@ update.sh
 .dist/
 src/build/
 src/installer
+src/installer.sh
