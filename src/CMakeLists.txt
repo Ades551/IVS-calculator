@@ -25,7 +25,7 @@ add_library(
 target_include_directories(lib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 # calc executable
-add_executable(calc
+add_executable(ivs-calc
     calc.ui
     calc.cpp
     calc.h
@@ -35,5 +35,4 @@ add_executable(calc
 add_executable(math_test ${CMAKE_CURRENT_SOURCE_DIR}/tests/math_test.cpp)
 
 target_link_libraries(math_test PRIVATE lib gtest gtest_main)
-target_link_libraries(calc Qt5::Widgets lib)
-#target_link_libraries(calc PRIVATE lib)
+target_link_libraries(ivs-calc Qt5::Widgets lib)
