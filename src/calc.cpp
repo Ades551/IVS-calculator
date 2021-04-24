@@ -37,8 +37,8 @@ calc::calc(QWidget *parent)
     //MATH OPERATION BUTTONS
     connect(ui->buttonADD, SIGNAL(released()), this,
             SLOT(MathButtonPressed()));
-    connect(ui->buttonADD, SIGNAL(pressed()), this,
-            SLOT( change_color() ));
+    /*connect(ui->buttonADD, SIGNAL(pressed()), this,
+            SLOT( change_color() ));*/
 
     connect(ui->buttonSUB, SIGNAL(released()), this,
             SLOT(MathButtonPressed()));
