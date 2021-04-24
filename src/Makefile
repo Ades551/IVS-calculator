@@ -11,4 +11,4 @@ getlibs:
 	sudo apt-get install qt5-default
 
 run:
-	./build/calc
+	./build/ivs-calc
