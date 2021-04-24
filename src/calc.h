@@ -24,5 +24,6 @@ private slots:
     void EqualButtonPressed();
     void DelButtonPressed();
     void ACButtonPressed();
+    void change_color();
 };
 #endif // CALC_H
