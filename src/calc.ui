@@ -41,7 +41,7 @@
 	color: black;
 }
 
-QPushButton: pressed{
+QPushButton:pressed{
 	background-color: #A9A9A9;
 	border-style: solid;
 	border: 2px;
@@ -78,7 +78,7 @@ QPushButton: pressed{
 	color: black;
 }
 
-QPushButton: pressed{
+QPushButton:pressed{
 	background-color: #A9A9A9;
 	border-style: solid;
 	border: 2px;
@@ -115,7 +115,7 @@ QPushButton: pressed{
 	color: black;
 }
 
-QPushButton: pressed{
+QPushButton:pressed{
 	background-color: #A9A9A9;
 	border-style: solid;
 	border: 2px;
@@ -152,7 +152,7 @@ QPushButton: pressed{
 	color: black;
 }
 
-QPushButton: pressed{
+QPushButton:pressed{
 	background-color: #A9A9A9;
 	border-style: solid;
 	border: 2px;
@@ -189,7 +189,7 @@ QPushButton: pressed{
 	color: black;
 }
 
-QPushButton: pressed{
+QPushButton:pressed{
 	background-color: #A9A9A9;
 	border-style: solid;
 	border: 2px;
@@ -226,7 +226,7 @@ QPushButton: pressed{
 	color: black;
 }
 
-QPushButton: pressed{
+QPushButton:pressed{
 	background-color: #A9A9A9;
 	border-style: solid;
 	border: 2px;
@@ -263,7 +263,7 @@ QPushButton: pressed{
 	color: black;
 }
 
-QPushButton: pressed{
+QPushButton:pressed{
 	background-color: #A9A9A9;
 	border-style: solid;
 	border: 2px;
@@ -300,7 +300,7 @@ QPushButton: pressed{
 	color: black;
 }
 
-QPushButton: pressed{
+QPushButton:pressed{
 	background-color: #A9A9A9;
 	border-style: solid;
 	border: 2px;
@@ -337,7 +337,7 @@ QPushButton: pressed{
 	color: black;
 }
 
-QPushButton: pressed{
+QPushButton:pressed{
 	background-color: #A9A9A9;
 	border-style: solid;
 	border: 2px;
@@ -374,7 +374,7 @@ QPushButton: pressed{
 	color: black;
 }
 
-QPushButton: pressed{
+QPushButton:pressed{
 	background-color: #A9A9A9;
 	border-style: solid;
 	border: 2px;
@@ -411,7 +411,7 @@ QPushButton: pressed{
 	color: black;
 }
 
-QPushButton: pressed{
+QPushButton:pressed{
 	background-color: #A9A9A9;
 	border-style: solid;
 	border: 2px;
@@ -446,8 +446,8 @@ QPushButton: pressed{
 	color: black;
 }
 
-QPushButton: pressed{
-	background-color: #2E36F8;
+QPushButton:pressed{
+	background-color: #5257fa;
 	border: 2px black;
 	padding: 20px;	
 	color: black;
@@ -481,7 +481,7 @@ QPushButton: pressed{
 	color: black;
 }
 
-QPushButton: pressed{
+QPushButton:pressed{
 	background-color: #A9A9A9;
 	border-style: solid;
 	border: 2px;
@@ -540,7 +540,7 @@ QPushButton: pressed{
 	color: black;
 }
 
-QPushButton: pressed{
+QPushButton:pressed{
 	background-color: #A9A9A9;
 	border-style: solid;
 	border: 2px;
@@ -577,7 +577,7 @@ QPushButton: pressed{
 	color: black;
 }
 
-QPushButton: pressed{
+QPushButton:pressed{
 	background-color: #A9A9A9;
 	border-style: solid;
 	border: 2px;
@@ -614,7 +614,7 @@ QPushButton: pressed{
 	color: black;
 }
 
-QPushButton: pressed{
+QPushButton:pressed{
 	background-color: #A9A9A9;
 	border-style: solid;
 	border: 2px;
@@ -651,7 +651,7 @@ QPushButton: pressed{
 	color: black;
 }
 
-QPushButton: pressed{
+QPushButton:pressed{
 	background-color: #A9A9A9;
 	border-style: solid;
 	border: 2px;
@@ -688,7 +688,7 @@ QPushButton: pressed{
 	color: black;
 }
 
-QPushButton: pressed{
+QPushButton:pressed{
 	background-color: #A9A9A9;
 	border-style: solid;
 	border: 2px;
@@ -725,7 +725,7 @@ QPushButton: pressed{
 	color: black;
 }
 
-QPushButton: pressed{
+QPushButton:pressed{
 	background-color: #A9A9A9;
 	border-style: solid;
 	border: 2px;
@@ -765,7 +765,7 @@ QPushButton: pressed{
 	color: black;
 }
 
-QPushButton: pressed{
+QPushButton:pressed{
 	background-color: #A9A9A9;
 	border-style: solid;
 	border: 2px;
@@ -802,7 +802,7 @@ QPushButton: pressed{
 	color: black;
 }
 
-QPushButton: pressed{
+QPushButton:pressed{
 	background-color: #A9A9A9;
 	border-style: solid;
 	border: 2px;
@@ -839,7 +839,7 @@ QPushButton: pressed{
 	color: black;
 }
 
-QPushButton: pressed{
+QPushButton:pressed{
 	background-color: #A9A9A9;
 	border-style: solid;
 	border: 2px;
