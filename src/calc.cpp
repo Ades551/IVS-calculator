@@ -1,6 +1,8 @@
 #include "calc.h"
 #include "ui_calc.h"
 #include "lib/cmath.h"
+#include <QDebug>
+
 
 //Initial value of calculation
 double calcVal=0.0;
@@ -35,6 +37,9 @@ calc::calc(QWidget *parent)
     //MATH OPERATION BUTTONS
     connect(ui->buttonADD, SIGNAL(released()), this,
             SLOT(MathButtonPressed()));
+    connect(ui->buttonADD, SIGNAL(pressed()), this,
+            SLOT( change_color() ));
+
     connect(ui->buttonSUB, SIGNAL(released()), this,
             SLOT(MathButtonPressed()));
     connect(ui->buttonMUL, SIGNAL(released()), this,
@@ -70,15 +75,21 @@ calc::~calc()
     delete ui;
 }
 
+void calc::change_color() { //FIXME OR DELETE ME IDUNNO
+    QPushButton *button = (QPushButton *)sender();
+    button->setStyleSheet("QPushButton { background-color: red }");
+}
+
 void calc::NumberPressed() {
     QPushButton *button = (QPushButton *)sender();
     QString butValue = button->text();
     QString displayValue = ui->display->text();
 
-    if((displayValue.toDouble()==0) || (displayValue.toDouble()==0.0)){
+    //button->setStyleSheet("QPushButton { background-color: red }"); //DELETE ME
+
+    if((QString::compare(displayValue, "0", Qt::CaseInsensitive) == 0) || (QString::compare(displayValue, "0.0", Qt::CaseInsensitive) == 0)){
         ui->display->setText(butValue);
-    }
-    else {
+    } else {
         QString newValueString = displayValue + butValue; //concat new to the number current
         double newValue = newValueString.toDouble();
         ui->display->setText(QString::number(newValue, 'g', 16));
@@ -100,7 +111,8 @@ void calc::DotPressed() {
 void calc::MathButtonPressed() {
 
     QString displayVal = ui->display->text();
-    calcVal = displayVal.toDouble();
+    double calcValtmp = displayVal.toDouble();
+
 
     // Sender returns a pointer to the button pressed
     QPushButton *button = (QPushButton *)sender();
@@ -108,34 +120,37 @@ void calc::MathButtonPressed() {
     // Get math symbol on the button
     QString butVal = button->text();
 
-
-    if(QString::compare(butVal, "/", Qt::CaseInsensitive) == 0){
-        divTrigger = true;
+    if (calcValtmp!=0 || calcValtmp!=0.0) {
+        if(QString::compare(butVal, "/", Qt::CaseInsensitive) == 0){
+            divTrigger = true;
+        }
+        else if(QString::compare(butVal, "X", Qt::CaseInsensitive) == 0){
+            mulTrigger = true;
+        }
+        else if(QString::compare(butVal, "+", Qt::CaseInsensitive) == 0){
+            addTrigger = true;
+        }
+        else if(QString::compare(butVal, "-", Qt::CaseInsensitive) == 0){
+            subTrigger = true;
+        }
+        else if(QString::compare(butVal, "√", Qt::CaseInsensitive) == 0){
+            sqrTrigger = true;
+        }
+        else if(QString::compare(butVal, "log", Qt::CaseInsensitive) == 0){
+            logTrigger = true;
+        }
+        else if(QString::compare(butVal, "!", Qt::CaseInsensitive) == 0){
+            facTrigger = true;
+        }
+        else if(QString::compare(butVal, "X^Y", Qt::CaseInsensitive) == 0){
+            powTrigger = true;
+        }
+        ui->display->setText("");
+        calcVal=displayVal.toDouble();
     }
-    else if(QString::compare(butVal, "X", Qt::CaseInsensitive) == 0){
-        mulTrigger = true;
+    else {
+        ui->display->setText(butVal);
     }
-    else if(QString::compare(butVal, "+", Qt::CaseInsensitive) == 0){
-        addTrigger = true;
-    }
-    else if(QString::compare(butVal, "-", Qt::CaseInsensitive) == 0){
-        subTrigger = true;
-    }
-    else if(QString::compare(butVal, "√", Qt::CaseInsensitive) == 0){
-        sqrTrigger = true;
-    }
-    else if(QString::compare(butVal, "log", Qt::CaseInsensitive) == 0){
-        logTrigger = true;
-    }
-    else if(QString::compare(butVal, "!", Qt::CaseInsensitive) == 0){
-        facTrigger = true;
-    }
-    else if(QString::compare(butVal, "X^Y", Qt::CaseInsensitive) == 0){
-        powTrigger = true;
-    }
-
-    // Clear display
-    ui->display->setText("");
 }
 
 void calc::EqualButtonPressed(){
@@ -160,24 +175,37 @@ void calc::EqualButtonPressed(){
         }
         else if(divTrigger){
             solution = CalcMath::div(calcVal, dblDisplayVal);
+            if (!solution) {
+                ui->display->setText("MATH ERROR: Division by zero!");
+            }
         }
         else if(logTrigger){
             solution = CalcMath::log(calcVal, dblDisplayVal);
+            if (!solution) {
+                ui->display->setText("MATH ERROR: Invalid use of log!");
+            }
         }
         else if(facTrigger){
-            solution = CalcMath::fact(calcVal); //FIXME
+            solution = CalcMath::fact(calcVal);
+            if (!solution) {
+                ui->display->setText("MATH ERROR: Invalid number used!");
+            }
         }
         else if(powTrigger){
             solution = CalcMath::pow(calcVal, dblDisplayVal);
         }
-        else {
+        else { //fix
             solution = CalcMath::root(calcVal, dblDisplayVal);
+            if (!solution) {
+                ui->display->setText("MATH ERROR: Invalid use of operation!");
+            }
         }
     }
 
     // Put solution in display
-    ui->display->setText(QString::number(solution));
-
+    if (solution) {
+        ui->display->setText(QString::number(solution));
+    }
     // Reset all triggers
     divTrigger=false;
     mulTrigger=false;
@@ -192,7 +220,7 @@ void calc::EqualButtonPressed(){
 void calc::DelButtonPressed() {
     QString displayValue = ui->display->text();
 
-    if((displayValue.toDouble()!=0) && (displayValue.toDouble()!=0.0)){
+    if((displayValue.toDouble()!=0) && (displayValue.toDouble()!=0.0)) {
         displayValue.chop(1);
         ui->display->setText(displayValue);
     }
