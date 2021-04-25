@@ -3,7 +3,7 @@
 #include "lib/cmath.h"
 #include <stdexcept>
 
-#include <QDebug>
+//#include <QDebug>
 
 
 //Initial value of calculation
