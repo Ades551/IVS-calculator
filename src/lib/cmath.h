@@ -66,7 +66,7 @@ public:
     /**
      * @brief Math factorial
      * @param number factorial number
-     * @retuern Factorial of number
+     * @return Factorial of number
      * @throw invalid_argument number must be positive integer!
      */
     static unsigned long fact(double number);
