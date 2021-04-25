@@ -18,7 +18,6 @@ bool facTrigger=false;
 bool powTrigger=false;
 bool sqrTrigger=false;
 bool logTrigger=false;
-bool dotTrigger=false;
 
 calc::calc(QWidget *parent)
     : QMainWindow(parent)
@@ -94,8 +93,8 @@ void calc::NumberPressed() {
         ui->display->setText(butValue);
     } else {
         QString newValueString = displayValue + butValue; //concat new to the number current
-        double newValue = newValueString.toDouble();
-        ui->display->setText(QString::number(newValue, 'g', 16));
+        if( !(newValueString.size() > 16) ) ui->display->setText(newValueString);
+        //double newValue = newValueString.toDouble();
     }
 
     //if(addTrigger || subTrigger || mulTrigger || divTrigger || logTrigger || facTrigger || powTrigger || sqrTrigger) calc::EqualButtonPressed();
@@ -106,10 +105,9 @@ void calc::DotPressed() {
     QString butValue = button->text();
     QString displayValue = ui->display->text();
 
-    if (dotTrigger==false) {
+    if(!displayValue.contains(".", Qt::CaseInsensitive)){
         QString newValueString = displayValue + butValue; //concat new to the number current
         ui->display->setText(newValueString);
-        dotTrigger=true;
     }
 }
 
@@ -124,8 +122,6 @@ void calc::MathButtonPressed() {
 
     // Get math symbol on the button
     QString butVal = button->text();
-
-    dotTrigger = false;
 
     if (calcValtmp!=0 || calcValtmp!=0.0) {
         if(QString::compare(butVal, "/", Qt::CaseInsensitive) == 0){
@@ -233,7 +229,6 @@ void calc::EqualButtonPressed(){
     powTrigger=false;
     sqrTrigger=false;
     logTrigger=false;
-    dotTrigger=false;
 }
 
 void calc::DelButtonPressed() {
@@ -256,5 +251,4 @@ void calc::ACButtonPressed() {
     powTrigger=false;
     sqrTrigger=false;
     logTrigger=false;
-    dotTrigger=false;
 }
