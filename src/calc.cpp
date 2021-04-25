@@ -3,7 +3,7 @@
 #include "lib/cmath.h"
 #include <stdexcept>
 
-//#include <QDebug>
+#include <QDebug>
 
 
 //Initial value of calculation
@@ -32,7 +32,18 @@ calc::calc(QWidget *parent)
         QString numButton = "button"+QString::number(i);
         numbers[i] = calc::findChild<QPushButton *> (numButton);
         connect(numbers[i], SIGNAL(released()), this, SLOT(NumberPressed()));
+        numbers[i]->setShortcut(QKeySequence(QString::number(i)));
     }
+
+    // KEYBOARD SHORTCUTS
+    ui->buttonDEL->setShortcut(Qt::Key_Backspace);
+    ui->buttonDOT->setShortcut(Qt::Key_Period);
+    ui->buttonEQUAL->setShortcut(Qt::Key_Enter);
+    ui->buttonAC->setShortcut(Qt::Key_Escape);
+    ui->buttonADD->setShortcut(Qt::Key_Plus);
+    ui->buttonSUB->setShortcut(Qt::Key_Minus);
+    ui->buttonMUL->setShortcut(QKeySequence("*"));
+    ui->buttonDIV->setShortcut(Qt::Key_Slash);
 
     // CALL FUNCTIONS WHEN BUTTON IS RELEASED
 
