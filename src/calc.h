@@ -18,11 +18,34 @@ public:
 private:
     Ui::calc *ui;
 private slots:
+    /**
+     * @brief Function to connect number buttons
+     */
     void NumberPressed();
+
+    /**
+     * @brief Function to connect decimal separator button
+     */ 
     void DotPressed();
+
+    /**
+     * @brief Function to connect math operation buttons
+     */ 
     void MathButtonPressed();
+
+    /**
+     * @brief Function to connect equal button
+     */ 
     void EqualButtonPressed();
+
+    /**
+     * @brief Function to connect DEL button
+     */ 
     void DelButtonPressed();
+
+    /**
+     * @brief Function to connect AC button
+     */ 
     void ACButtonPressed();
 };
 #endif // CALC_H
