@@ -33,6 +33,8 @@ add_executable(ivs-calc
 )
 
 add_executable(math_test ${CMAKE_CURRENT_SOURCE_DIR}/tests/math_test.cpp)
+add_executable(stddev ${CMAKE_CURRENT_SOURCE_DIR}/profiling/stddev.cpp)
 
+target_link_libraries(stddev lib)
 target_link_libraries(math_test PRIVATE lib gtest gtest_main)
 target_link_libraries(ivs-calc Qt5::Widgets lib)
