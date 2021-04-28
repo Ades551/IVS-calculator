@@ -96,12 +96,14 @@ void calc::NumberPressed() {
     QString butValue = button->text();
     QString displayValue = ui->display->text();
 
-    if(QString::compare(displayNum, "0", Qt::CaseInsensitive) != 0) {
+    if(displayNum.length() < 16){
+        if(QString::compare(displayNum, "0", Qt::CaseInsensitive) != 0) {
         displayNum = displayNum + butValue;
         ui->display->setText(displayValue + butValue);
-    } else {
-        displayNum = butValue;
-        ui->display->setText(displayNum);
+        } else {
+            displayNum = butValue;
+            ui->display->setText(displayNum);
+        }
     }
 }
 
