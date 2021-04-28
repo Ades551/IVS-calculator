@@ -52,6 +52,9 @@ calc::calc(QWidget *parent)
     ui->buttonMUL->setShortcut(QKeySequence("*"));
     ui->buttonDIV->setShortcut(Qt::Key_Slash);
     ui->buttonPOW->setShortcut(QKeySequence("Ctrl+R"));
+    ui->buttonSQRT->setShortcut(QKeySequence("Ctrl+S"));
+    ui->buttonLOG->setShortcut(QKeySequence("Ctrl+L"));
+    ui->buttonFACT->setShortcut(QKeySequence("Ctrl+F"));
 
     // CALL FUNCTIONS WHEN BUTTON IS RELEASED
 
