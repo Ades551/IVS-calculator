@@ -47,5 +47,11 @@ private slots:
      * @brief Function to connect AC button
      */ 
     void ACButtonPressed();
+
+    /**
+     * @brief Function for help window
+     */
+    void HelpButtonPressed();
+
 };
 #endif // CALC_H
