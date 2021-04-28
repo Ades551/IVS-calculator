@@ -2,6 +2,7 @@
 #include "ui_calc.h"
 #include "lib/cmath.h"
 #include <stdexcept>
+#include <QMessageBox>
 
 // #include <QDebug>
 
@@ -50,8 +51,12 @@ calc::calc(QWidget *parent)
     ui->buttonSUB->setShortcut(Qt::Key_Minus);
     ui->buttonMUL->setShortcut(QKeySequence("*"));
     ui->buttonDIV->setShortcut(Qt::Key_Slash);
+    ui->buttonPOW->setShortcut(QKeySequence("Ctrl+R"));
 
     // CALL FUNCTIONS WHEN BUTTON IS RELEASED
+
+    connect(ui->buttonHELP, SIGNAL(released()), this,
+            SLOT(HelpButtonPressed()));
 
     //MATH OPERATION BUTTONS
     connect(ui->buttonADD, SIGNAL(released()), this,
@@ -295,4 +300,21 @@ void reset(){
     powTrigger=false;
     sqrTrigger=false;
     logTrigger=false;
+}
+
+void calc::HelpButtonPressed() {
+    QMessageBox::information(this, tr("Help"), 
+    tr("KEYBOARD OPERATIONS\nAdd - \"+\"\n\
+Subtract - \"-\"\n\
+Multiply - \"*\"\n\
+Divide - \"/\"\n\
+Delete - \"Backspace\"\n\
+Result - \"Enter\"\n\
+--------------------\n\
+SHORTCUTS\n\
+Ctrl+R - pow\n\
+Crtl+S - sqrt\n\
+Ctrl+F - factorial\n\
+Ctrl+L - log\
+    "));
 }
