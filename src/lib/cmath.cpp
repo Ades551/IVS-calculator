@@ -50,6 +50,8 @@ double CalcMath::log(double basis, double number){
 unsigned long CalcMath::fact(double number){
 	if(number < 0 || number != lround(number))
 		throw std::invalid_argument("number must be positive integer!");
+	if(number > 20)
+		throw std::invalid_argument("overflow: number too high!");
 	unsigned long fact = 1;
 	for(unsigned long i = number; i > 1;i--)
 		fact *= i;
