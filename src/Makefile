@@ -1,3 +1,6 @@
+FILES = plan/ profiling/ src/ .gitignore dokumentácia.pdf LICENSE README.md .git
+NAME = xrajko00
+
 all:
 	./setup.sh && cd build && cmake .. && make
 
@@ -6,6 +9,17 @@ clean:
 
 test:
 	./build/math_test
+
+pack:
+	cd .. && mkdir -p ivs-calc/doc && mkdir -p ivs-calc/install && mkdir -p ivs-calc/repo
+	cd ../ivs-calc/doc && doxygen ../../src/Doxyfile
+	cd ../ivs-calc && cp ../src/install/*.deb ./install/
+	cd .. && cp -r $(FILES) ./ivs-calc/repo
+	cd .. && zip -r $(NAME) ./ivs-calc/
+	rm -fr ../ivs-calc/
+
+doc:
+	doxygen Doxyfile
 
 getlibs:
 	sudo apt-get install qt5-default

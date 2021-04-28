@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=ivs-calc
+Version=1.0
+Icon=/opt/ivs-calc/ivs-calc.png
+Type=Application
+Exec=/usr/local/bin/ivs-calc

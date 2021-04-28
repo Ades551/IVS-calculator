@@ -133,7 +133,7 @@ void calc::MathButtonPressed() {
     // Get math symbol on the button
     QString butVal = button->text();
 
-    if (QString::compare(displayNum, "", Qt::CaseInsensitive) != 0) {
+    if ((QString::compare(displayNum, "", Qt::CaseInsensitive) != 0) && (QString::compare(displayNum, "-", Qt::CaseInsensitive) != 0)) {
         if(QString::compare(butVal, "/", Qt::CaseInsensitive) == 0){
             divTrigger = true;
         }
@@ -177,7 +177,7 @@ void calc::MathButtonPressed() {
         ui->display->setText(output);
         //calcVal=displayVal.toDouble();
     }
-    else if(QString::compare(butVal, "-", Qt::CaseInsensitive) == 0){
+    else if((QString::compare(butVal, "-", Qt::CaseInsensitive) == 0) && (QString::compare(displayNum, "-", Qt::CaseInsensitive) != 0)){
         displayNum = butVal;
         ui->display->setText(displayVal + butVal);
     }
