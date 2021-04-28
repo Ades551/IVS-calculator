@@ -1,0 +1,6 @@
+Package: ivs-calc
+Version: 1.0
+Architecture: all
+Maintainer: Not set
+Description: Not set
+Depends: libqt5widgets5

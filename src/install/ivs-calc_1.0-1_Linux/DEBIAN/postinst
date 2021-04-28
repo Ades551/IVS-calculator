@@ -1,0 +1,3 @@
+#!/bin/bash
+
+desktop-file-install /usr/share/applications/ivs-calc.desktop
