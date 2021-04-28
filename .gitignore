@@ -3,5 +3,3 @@ update.sh
 .vscode/
 .dist/
 src/build/
-src/install
-src/install.sh
