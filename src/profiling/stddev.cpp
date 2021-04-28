@@ -1,4 +1,7 @@
-//
-// Created by richard on 4/29/21.
-//
+#include <iostream>
+#include "lib/cmath.h"
 
+int main() {
+	std::cout << "stddev" << std::endl;
+	return 0;
+}
