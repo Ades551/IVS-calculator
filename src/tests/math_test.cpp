@@ -119,7 +119,7 @@ TEST_F(Math, Division) {
     EXPECT_NE(math.div(3.14159, -1), 3.14159);
     
     // false
-    EXPECT_FALSE(math.div(2, 0));
+    EXPECT_THROW(math.div(2, 0), std::invalid_argument);
 }
 
 // CalcMath.pow tests
@@ -168,11 +168,11 @@ TEST_F(Math, SquareRoot) {
     ASSERT_NE(math.root(2, 16), 8);
     EXPECT_NE(math.root(2, 9), 4.5);
     EXPECT_NE(math.root(3, -8), 2);
-    EXPECT_NE(math.root(-3, 8), -2);
 
     // false
-    ASSERT_FALSE(math.root(2, -1));
-    ASSERT_FALSE(math.root(4, -1));
+    EXPECT_ANY_THROW(math.root(-3, 8));
+    EXPECT_ANY_THROW(math.root(2, -1));
+    EXPECT_ANY_THROW(math.root(4, -1));
 }
 
 // CalcMath.log tests
@@ -190,8 +190,8 @@ TEST_F(Math, Logarithm) {
     EXPECT_NE(math.log(2, 8), 4);
 
     // false
-    ASSERT_FALSE(math.log(2, 0));
-    ASSERT_FALSE(math.log(10, -5));
+    EXPECT_ANY_THROW(math.log(2, 0));
+    EXPECT_ANY_THROW(math.log(10, -5));
 }
 
 // CalcMath.fact tests
@@ -206,6 +206,6 @@ TEST_F(Math, Factorial) {
     EXPECT_NE(math.fact(4), 16);
 
     // false
-    ASSERT_FALSE(math.fact(-1));
-    ASSERT_FALSE(math.fact(-100));
+    EXPECT_ANY_THROW(math.fact(-1));
+    EXPECT_ANY_THROW(math.fact(-100));
 }
