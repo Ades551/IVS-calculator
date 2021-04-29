@@ -3,7 +3,7 @@ NAME = xrajko00 # package name
 
 .PHNONY: all install clean test pack doc getlibs run profile
 
-all:
+all: profile
 	./setup.sh && cd build && cmake .. && make
 
 # create installer
@@ -34,5 +34,5 @@ run:
 	./build/ivs-calc
 
 profile:
-	mkdir -p ./build/
-	cd build && cmake ../profiling/ && make
+	mkdir -p ./build/profiling
+	cd build/profiling && cmake ../../profiling/ && make
