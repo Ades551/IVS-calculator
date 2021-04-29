@@ -1,11 +1,17 @@
 FILES = plan/ profiling/ src/ .gitignore dokumentácia.pdf LICENSE README.md .git # files to pack in repo dir
 NAME = xrajko00 # package name
 
+.PHNONY: all install clean test pack doc getlibs run profile
+
 all:
 	./setup.sh && cd build && cmake .. && make
 
+# create installer
+install: all
+	cd ./install/ && ./install.sh
+
 clean:
-	rm -r build/
+	rm -rf build/ doxygen-gen/
 
 test:
 	./build/math_test
@@ -26,3 +32,7 @@ getlibs:
 
 run:
 	./build/ivs-calc
+
+profile:
+	mkdir -p ./build/
+	cd build && cmake ../profiling/ && make
