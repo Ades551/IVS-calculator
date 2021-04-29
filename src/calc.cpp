@@ -30,6 +30,7 @@ calc::calc(QWidget *parent)
     , ui(new Ui::calc)
 {
     ui->setupUi(this); //Initialize UI
+    ui->display->setReadOnly(true);
     ui->display->setText(""); //Display default value
     QPushButton *numbers[10]; //Make array of number buttons
 
