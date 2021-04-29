@@ -1,5 +1,5 @@
-FILES = plan/ profiling/ src/ .gitignore dokumentácia.pdf LICENSE README.md .git
-NAME = xrajko00
+FILES = plan/ profiling/ src/ .gitignore dokumentácia.pdf LICENSE README.md .git # files to pack in repo dir
+NAME = xrajko00 # package name
 
 all:
 	./setup.sh && cd build && cmake .. && make
