@@ -1,6 +1,6 @@
 Package: ivs-calc
 Version: 1.0
 Architecture: all
-Maintainer: Not set
-Description: Not set
+Maintainer: Avengers
+Description: Calculator with UI
 Depends: libqt5widgets5
