@@ -32,7 +32,10 @@ add_executable(ivs-calc
     main.cpp
 )
 
+# test executable
 add_executable(math_test ${CMAKE_CURRENT_SOURCE_DIR}/tests/math_test.cpp)
+
+# profiling executable
 add_executable(stddev ${CMAKE_CURRENT_SOURCE_DIR}/profiling/stddev.cpp)
 
 target_link_libraries(stddev lib)
