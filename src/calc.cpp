@@ -10,8 +10,6 @@
 double calcVal=0;
 
 QString displayNum = "";
-//QString displayNum_2 = "";
-//QString displayOperand = "";
 
 bool next_val = false;
 
@@ -250,7 +248,7 @@ void calc::EqualButtonPressed(){
 
         // Put solution in display
         if (!exception) {
-            displayNum = QString::number(solution);
+            displayNum = QString::number(solution, 'g', 16);
             ui->display->setText(displayNum);
         } else {
             displayNum = "0";
