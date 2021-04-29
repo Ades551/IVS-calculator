@@ -1,3 +1,4 @@
+CC = g++
 FILES = plan/ profiling/ src/ .gitignore dokumentácia.pdf LICENSE README.md .git # files to pack in repo dir
 NAME = xrajko00 # package name
 
@@ -16,7 +17,7 @@ clean:
 test:
 	./build/math_test
 
-pack:
+pack: clean
 	cd .. && mkdir -p ivs-calc/doc && mkdir -p ivs-calc/install && mkdir -p ivs-calc/repo
 	cd ../ivs-calc/doc && doxygen ../../src/Doxyfile
 	cd ../ivs-calc && cp ../src/install/*.deb ./install/
@@ -34,5 +35,4 @@ run:
 	./build/ivs-calc
 
 profile:
-	mkdir -p ./build/profiling
-	cd build/profiling && cmake ../../profiling/ && make
+	cd profiling && $(CC) -pg -g -o profiling *.cpp ../lib/*.cpp
