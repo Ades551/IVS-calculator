@@ -18,12 +18,12 @@ test:
 	./build/math_test
 
 pack: clean
-	cd .. && mkdir -p ivs-calc/doc && mkdir -p ivs-calc/install && mkdir -p ivs-calc/repo
-	cd ../ivs-calc/doc && doxygen ../../src/Doxyfile
-	cd ../ivs-calc && cp ../src/install/*.deb ./install/
-	cd .. && cp -r $(FILES) ./ivs-calc/repo
-	cd .. && zip -r $(NAME) ./ivs-calc/
-	rm -fr ../ivs-calc/
+	cd .. && mkdir -p $(NAME)/doc && mkdir -p $(NAME)/install && mkdir -p $(NAME)/repo
+	cd ../$(NAME)/doc && doxygen ../../src/Doxyfile
+	cd ../$(NAME) && cp ../src/install/*.deb ./install/
+	cd .. && cp -r $(FILES) ./$(NAME)/repo
+	cd .. && zip -r $(NAME) ./$(NAME)/
+	rm -fr ../$(NAME)/
 
 doc:
 	doxygen Doxyfile
