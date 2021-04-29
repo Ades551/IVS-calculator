@@ -1,6 +1,6 @@
 CC = g++
 FILES = plan/ profiling/ src/ .gitignore dokumentácia.pdf LICENSE README.md .git # files to pack in repo dir
-NAME = xrajko00 # package name
+NAME = xrajko00_xphanj00_xbuban00 # package name
 
 .PHNONY: all install clean test pack doc getlibs run profile
 
@@ -12,7 +12,7 @@ install: all
 	cd ./install/ && ./install.sh
 
 clean:
-	rm -rf build/ doxygen-gen/
+	rm -rf build/ doxygen-gen/ profiling/profiling
 
 test:
 	./build/math_test
