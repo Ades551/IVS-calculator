@@ -1,0 +1,3 @@
+xrajko00 100 (testy, Makefile, inštalátor, dokumentácia)
+xphanj00 100 (aplikácia ivs-calc (front-end, backend))
+xbuban00 100 (matematická knižnica, profiling)
