@@ -17,9 +17,9 @@ clean:
 test:
 	./build/math_test
 
-pack: clean
+pack: clean doc
 	cd .. && mkdir -p $(NAME)/doc && mkdir -p $(NAME)/install && mkdir -p $(NAME)/repo
-	cd ../$(NAME)/doc && doxygen ../../src/Doxyfile
+	cp -r doxygen-gen ../$(NAME)/doc && rm -rf doxygen-gen
 	cd ../$(NAME) && cp ../src/install/*.deb ./install/
 	cd .. && cp -r $(FILES) ./$(NAME)/repo
 	cd .. && zip -r $(NAME) ./$(NAME)/
