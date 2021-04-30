@@ -1,5 +1,5 @@
 CC = g++
-FILES = debug/ mockup/ plan/ profiling/ src/ .gitignore dokumentácia.pdf LICENSE README.md .git # files to pack in repo dir
+FILES = debug/ mockup/ plan/ profiling/ src/ .gitignore dokumentácia.pdf LICENSE README.md .git skutocnost.txt hodnoceni.txt screenshot.png # files to pack in repo dir
 NAME = xrajko00_xphanj00_xbuban00
 
 .PHNONY: all install clean test pack doc getlibs run profile
