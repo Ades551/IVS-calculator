@@ -1,0 +1,33 @@
+Hodnocení Vašeho týmu
+=====================
+
+Plán:
+-----
+stanovení termínů: 1
+rozdělení práce a přidělení úkolů: 2
+komunikační kanály: 1
+pravidla pro komunikaci: 0
+systém pro správu verzí: 1
+zamyšlení: 0
+kompletnost plánu: 1
+bonusový bod: 0
+-------------------------------------
+plán celkem (po případném oříznutí): 6
+
+Produkt:
+--------
+vytvořený a přístupný repozitář: 6
+korektní odevzdání: 6
+matematická knihovna: 9
+testy k matematické knihovně: 9
+funkční program: 17
+instalátor a odinstalátor: 6
+nápověda: 4
+komentáře a generovaná dokumentace: 9
+uživatelská příručka: 7
+Makefile: 7,8
+debugging: 6
+mockup: 3
+profiling: 9,4
+-------------------------------------
+produkt celkem: 99,2
